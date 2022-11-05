@@ -1,0 +1,23 @@
+@import "../../assets/colors/Colors.scss";
+
+.header {
+  padding: 15px 0px;
+  background-color: $color-three;
+  &Inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+
+  span {
+    background-color: $color-four;
+    padding: 3px;
+    border-radius: 2px;
+    margin-left: 4px;
+  }
+}

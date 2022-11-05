@@ -1,0 +1,14 @@
+@import "../../assets/colors/Colors.scss";
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  transition: all 0.3s;
+  padding: 20px;
+  &:hover {
+    background-color: $color-one;
+  }
+}
