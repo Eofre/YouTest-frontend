@@ -2,18 +2,19 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import CreateTest from "../pages/createTest/CreateTest";
 import Home from "../pages/home/Home";
-import TestGame from "../pages/testGame/TestGame";
+import TestPage from "../pages/test/TestPage";
+import { Test } from "../types/types";
 
 interface AppRouterProps {
-  tests: Array<any>;
+  tests: Test[];
 }
 
 function AppRouter({ tests }: AppRouterProps) {
   return (
     <Routes>
-      <Route path="/" element={<Home tests={tests} />} />
-      <Route path="/createTest" element={<CreateTest />} />
-      <Route path="/testGame" element={<TestGame />} />
+      <Route index path="/" element={<Home tests={tests} />} />
+      <Route index path="/createTest" element={<CreateTest />} />
+      <Route index path="/test/:id" element={<TestPage tests={tests} />} />
     </Routes>
   );
 }

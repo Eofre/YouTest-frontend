@@ -1,0 +1,57 @@
+@import "../../assets/colors/Colors.scss";
+
+.testGame {
+  display: flex;
+  margin-top: 50px;
+  height: 415px;
+  //   border: 1px #fff solid;
+  justify-content: space-between;
+}
+
+.img {
+  padding-top: 15px;
+  height: 347px;
+  width: 550px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 550px;
+}
+
+.question {
+  font-size: 18px;
+  background-color: $color-three;
+}
+
+.answers {
+  margin-left: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.answer {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 3px;
+  background-color: $color-three;
+  text-align: center;
+  transition: all 0.3s;
+  font-size: 24px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    outline: 2px $color-four solid;
+  }
+
+  & + & {
+    margin-top: 1px;
+  }
+}

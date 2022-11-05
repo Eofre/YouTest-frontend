@@ -18,6 +18,16 @@ section {
   padding: 35px 0px;
 }
 
+button {
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
 }

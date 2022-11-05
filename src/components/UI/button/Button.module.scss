@@ -1,0 +1,13 @@
+@import "../../../assets/colors/Colors.scss";
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: $color-four;
+  border-radius: 3px;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0px 0px 8px $color-four;
+  }
+}
