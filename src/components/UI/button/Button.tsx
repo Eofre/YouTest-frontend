@@ -3,7 +3,7 @@ import cl from "./Button.module.scss";
 
 interface ButtonProps {
   children: React.ReactChild | React.ReactNode;
-  onClick?: () => void;
+  onClick?: (e?: any) => void;
 }
 
 export default function Button({ children, onClick }: ButtonProps) {

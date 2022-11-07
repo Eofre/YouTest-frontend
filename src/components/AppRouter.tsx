@@ -7,13 +7,18 @@ import { Test } from "../types/types";
 
 interface AppRouterProps {
   tests: Test[];
+  createTest: (e: React.MouseEvent<HTMLButtonElement>, test: Test) => void;
 }
 
-function AppRouter({ tests }: AppRouterProps) {
+function AppRouter({ tests, createTest }: AppRouterProps) {
   return (
     <Routes>
       <Route index path="/" element={<Home tests={tests} />} />
-      <Route index path="/createTest" element={<CreateTest />} />
+      <Route
+        index
+        path="/createTest"
+        element={<CreateTest createTest={createTest} />}
+      />
       <Route index path="/test/:id" element={<TestPage tests={tests} />} />
     </Routes>
   );

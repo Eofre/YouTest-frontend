@@ -1,0 +1,55 @@
+@import "../../assets/colors/Colors.scss";
+
+.create-test {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+  }
+  &__questions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__description {
+    background-color: $color-three;
+    padding: 15px 25px;
+    font-size: 17px;
+    width: 100%;
+    border-radius: 3px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  &__file {
+    display: none;
+  }
+
+  &__icon {
+    width: 300px;
+    height: 220px;
+    padding: 60px;
+    border: 3px $color-three solid;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  &__img {
+    width: 300px;
+    height: 220px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  &__label {
+    input,
+    textarea {
+      margin-top: 3px;
+    }
+
+    &-file {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

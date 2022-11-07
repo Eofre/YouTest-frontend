@@ -3,15 +3,14 @@
 .testGame {
   display: flex;
   margin-top: 50px;
-  height: 415px;
-  //   border: 1px #fff solid;
+  height: 400px;
   justify-content: space-between;
 }
 
 .img {
-  padding-top: 15px;
-  height: 347px;
-  width: 550px;
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 3px;
 }
 
 .left {
@@ -23,19 +22,19 @@
 
 .question {
   font-size: 18px;
-  background-color: $color-three;
 }
 
 .answers {
+  display: flex;
   margin-left: 20px;
   height: 100%;
-  display: flex;
   flex-direction: column;
   width: 45%;
 }
 
 .answer {
   cursor: pointer;
+  padding: 15px;
   width: 100%;
   border-radius: 3px;
   background-color: $color-three;

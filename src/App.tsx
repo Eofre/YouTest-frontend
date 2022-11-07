@@ -7,12 +7,16 @@ import { Test } from "./types/types";
 
 function App() {
   const [tests, setTests] = useState<Test[]>(db.tests);
-  console.log(tests);
+
+  function createTest(e: React.MouseEvent<HTMLButtonElement>, test: Test) {
+    e.preventDefault();
+    setTests([...tests, test]);
+  }
   return (
     <div className="App">
       <Header />
       <main>
-        <AppRouter tests={tests} />
+        <AppRouter tests={tests} createTest={createTest} />
       </main>
     </div>
   );

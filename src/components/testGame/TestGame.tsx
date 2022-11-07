@@ -4,7 +4,7 @@ import { Question } from "../../types/types";
 
 interface TestGameProps {
   question: Question;
-  chooseAnAnswer: () => void;
+  chooseAnAnswer: (indexAnswer: number) => void;
 }
 
 function TestGame({ question, chooseAnAnswer }: TestGameProps) {
@@ -16,8 +16,12 @@ function TestGame({ question, chooseAnAnswer }: TestGameProps) {
         <img className={cl.img} src={question.img} alt="" />
       </div>
       <ul className={cl.answers}>
-        {answers.map((item) => (
-          <li className={cl.answer} key={item} onClick={() => chooseAnAnswer()}>
+        {answers.map((item, index) => (
+          <li
+            className={cl.answer}
+            key={item}
+            onClick={() => chooseAnAnswer(index)}
+          >
             {item}
           </li>
         ))}

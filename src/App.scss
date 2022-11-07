@@ -18,6 +18,33 @@ section {
   padding: 35px 0px;
 }
 
+input {
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  border: none;
+}
+
+h2,
+h3,
+h4 {
+  margin-bottom: 7px;
+}
+
+textarea {
+  resize: none;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  border: none;
+}
+
 button {
   background: transparent;
   color: inherit;

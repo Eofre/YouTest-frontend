@@ -1,0 +1,9 @@
+@import "../../assets/colors/Colors.scss";
+
+.question {
+  padding: 20px;
+  background-color: $color-three;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
