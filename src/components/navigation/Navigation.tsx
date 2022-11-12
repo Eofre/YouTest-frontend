@@ -8,12 +8,12 @@ function Navigation() {
       <ul className={cl.list}>
         <li className={cl.item}>
           <Link className={cl.link} to="/">
-            Home
+            Главная
           </Link>
         </li>
         <li className={cl.item}>
           <Link className={cl.link} to="/createTest">
-            Create Test
+            Создать тест
           </Link>
         </li>
       </ul>

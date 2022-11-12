@@ -7,7 +7,6 @@ import { Test } from "./types/types";
 
 function App() {
   const [tests, setTests] = useState<Test[]>(db.tests);
-
   function createTest(e: React.MouseEvent<HTMLButtonElement>, test: Test) {
     e.preventDefault();
     setTests([...tests, test]);

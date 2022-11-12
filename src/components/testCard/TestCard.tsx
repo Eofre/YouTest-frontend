@@ -1,6 +1,7 @@
 import React from "react";
 import { Test } from "../../types/types";
 import cl from "./TestCard.module.scss";
+import quiz from "../../assets/images/quiz.svg";
 
 interface testCardProps {
   test: Test;
@@ -10,8 +11,11 @@ interface testCardProps {
 function testCard({ test, switchingToTheTest }: testCardProps) {
   return (
     <div onClick={() => switchingToTheTest(test.id)} className={cl.card}>
-      <img className={cl.img} src={test.img} alt="the picture of the test" />
-      {/* <p className={cl.numberQuestions}>{numberOfQuestions}</p> */}
+      <img className={cl.img} src={test.img} alt="test" />
+      <div className={cl.numberQuestions}>
+        <img src={quiz} alt="" />
+        {test.questions.length}
+      </div>
       <h4 className={cl.title}>{test.title}</h4>
     </div>
   );

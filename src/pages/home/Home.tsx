@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import Conteiner from "../../components/conteiner/Conteiner";
 import TestCard from "../../components/testCard/TestCard";
@@ -9,7 +9,7 @@ interface HomeProps {
   tests: Test[];
 }
 
-function Home({ tests }: HomeProps) {
+const Home: FC<HomeProps> = ({ tests }) => {
   let navigate = useNavigate();
   const switchingToTheTest = (id: number) => navigate(`/test/${id}`);
   return (
@@ -28,6 +28,6 @@ function Home({ tests }: HomeProps) {
       </Conteiner>
     </section>
   );
-}
+};
 
 export default Home;

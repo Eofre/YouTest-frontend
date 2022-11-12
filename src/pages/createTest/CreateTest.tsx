@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import "./CreateTest.scss";
 import Conteiner from "../../components/conteiner/Conteiner";
 import QuestionForm from "../../components/questionForm/QuestionForm";
@@ -11,7 +11,7 @@ interface CreateTestProps {
   createTest: (e: React.MouseEvent<HTMLButtonElement>, test: Test) => void;
 }
 
-function CreateTest({ createTest }: CreateTestProps) {
+const CreateTest: FC<CreateTestProps> = ({ createTest }) => {
   const [questions, setQuestions] = useState<Question[]>([
     {
       question: "",
@@ -126,6 +126,7 @@ function CreateTest({ createTest }: CreateTestProps) {
                 addAnswer={addAnswer}
                 handlerAnswer={handlerAnswer}
                 answers={copyTest.questions[index].answers}
+                questionImg={copyTest.questions[index].img}
               />
             ))}
             <Button onClick={(e) => addQuestion(e)}>Добавить вопрос</Button>
@@ -135,6 +136,6 @@ function CreateTest({ createTest }: CreateTestProps) {
       </Conteiner>
     </section>
   );
-}
+};
 
 export default CreateTest;

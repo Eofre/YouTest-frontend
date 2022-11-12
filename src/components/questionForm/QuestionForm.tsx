@@ -17,9 +17,11 @@ interface QuestionFormProps {
     indexAnswer: number
   ) => void;
   answers: string[];
+  questionImg: string;
 }
 
 function QuestionForm({
+  questionImg,
   question,
   handlerQuestion,
   indexQuestion,
@@ -35,6 +37,20 @@ function QuestionForm({
           value={question}
           onChange={(e) => handlerQuestion(e, indexQuestion)}
           placeholder={`Вопрос №${indexQuestion + 1}`}
+        />
+      </label>
+      <label>
+        Картинка вопроса
+        {/* {test.img === "" ? (
+              <img className="create-test__icon" src={noPhoto} alt="" />
+            ) : (
+              <img className="create-test__img" src={test.img} alt="" />
+            )} */}
+        <img className="create-test__img" src={questionImg} alt="" />
+        <input
+          className="create-test__file"
+          type="file"
+          accept="image/jpeg,image/png"
         />
       </label>
       <Answers
