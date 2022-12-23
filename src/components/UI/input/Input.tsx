@@ -1,25 +1,10 @@
-import React from "react";
+import React, { FC, InputHTMLAttributes } from "react";
 import cl from "./Input.module.scss";
 
-interface InputProps {
-  type: string;
-  placeholder?: string;
-  value?: string | number;
-  onChange?: (e?: any) => void;
-  backround?: string;
-}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-function Input({ type, placeholder, value, onChange, backround }: InputProps) {
-  return (
-    <input
-      className={cl.input}
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      style={{ background: backround }}
-    />
-  );
-}
+const Input: FC<InputProps> = ({ ...rest }) => {
+  return <input className={cl.input} {...rest} />;
+};
 
 export default Input;

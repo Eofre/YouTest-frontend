@@ -1,23 +1,28 @@
 @import "../../assets/colors/Colors.scss";
 
 .card {
-  max-width: 300px;
+  width: 100%;
   background-color: $color-three;
-  height: 450px;
+  min-height: 400px;
   font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 img {
-  width: 100%;
+  width: 350px;
+  height: 250px;
+  border-radius: 3px;
 }
 
 .text {
   padding: 5px 5px;
+  font-size: 20px;
 }
 
 .inf {
   height: 40px;
   text-align: center;
   padding: 10px 0px;
-  border-top: 1px solid $color-one;
+  // border-top: 1px solid $color-one;
 }

@@ -39,20 +39,20 @@ function QuestionForm({
           placeholder={`Вопрос №${indexQuestion + 1}`}
         />
       </label>
-      <label>
+      {/* <label>
         Картинка вопроса
-        {/* {test.img === "" ? (
+        {test.img === "" ? (
               <img className="create-test__icon" src={noPhoto} alt="" />
             ) : (
               <img className="create-test__img" src={test.img} alt="" />
-            )} */}
+            )}
         <img className="create-test__img" src={questionImg} alt="" />
         <input
           className="create-test__file"
           type="file"
           accept="image/jpeg,image/png"
         />
-      </label>
+      </label> */}
       <Answers
         answers={answers}
         addAnswer={addAnswer}

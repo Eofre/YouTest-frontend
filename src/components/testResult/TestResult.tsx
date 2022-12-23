@@ -32,7 +32,7 @@ function TestResult({
         <p>Оценка: {mark}</p>
       </div>
       <h3>Вопросы и ответы</h3>
-      <div className={cl.cards}>
+      <ul className={cl.cards}>
         {test.questions.map((question, index) => (
           <QuestionCard
             key={question.question}
@@ -40,7 +40,7 @@ function TestResult({
             answerUser={answersUser[index]}
           />
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

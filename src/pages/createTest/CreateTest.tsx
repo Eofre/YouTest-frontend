@@ -5,7 +5,7 @@ import QuestionForm from "../../components/questionForm/QuestionForm";
 import Button from "../../components/UI/button/Button";
 import Input from "../../components/UI/input/Input";
 import { Question, Test } from "../../types/types";
-import noPhoto from "../../assets/images/camera.svg";
+// import noPhoto from "../../assets/images/camera.svg";
 
 interface CreateTestProps {
   createTest: (e: React.MouseEvent<HTMLButtonElement>, test: Test) => void;
@@ -70,11 +70,11 @@ const CreateTest: FC<CreateTestProps> = ({ createTest }) => {
   fileReaderTest.onloadend = () => {
     setTest({ ...test, img: String(fileReaderTest.result) });
   };
-  function onImgSelectedTest(e: any) {
-    e.preventDefault();
-    const file = e.target.files[0];
-    fileReaderTest.readAsDataURL(file);
-  }
+  // function onImgSelectedTest(e: any) {
+  //   e.preventDefault();
+  //   const file = e.target.files[0];
+  //   fileReaderTest.readAsDataURL(file);
+  // }
 
   return (
     <section className="create-test">
@@ -88,7 +88,6 @@ const CreateTest: FC<CreateTestProps> = ({ createTest }) => {
               value={test.title}
               onChange={(e) => setTest({ ...test, title: e.target.value })}
               placeholder="Название"
-              backround="#201f1f"
             />
           </label>
           <label className="create-test__label">
@@ -102,7 +101,7 @@ const CreateTest: FC<CreateTestProps> = ({ createTest }) => {
               placeholder="Описание"
             ></textarea>
           </label>
-          <label className="create-test__label create-test__label-file">
+          {/* <label className="create-test__label create-test__label-file">
             Обложка теста
             {test.img === "" ? (
               <img className="create-test__icon" src={noPhoto} alt="" />
@@ -115,7 +114,7 @@ const CreateTest: FC<CreateTestProps> = ({ createTest }) => {
               accept="image/jpeg,image/png"
               onChange={(e) => onImgSelectedTest(e)}
             />
-          </label>
+          </label> */}
           <div className="create-test__questions">
             {test.questions.map((question, index) => (
               <QuestionForm

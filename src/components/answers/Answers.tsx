@@ -29,6 +29,9 @@ function Answers({
           onChange={(e) => handlerAnswer(e, indexQuestion, index)}
           type="text"
           placeholder="ответ"
+          draggable={true}
+          // onDragStart={e => dragStartHandler()}
+          // onDragLeave={e =>}
         />
       ))}
       <Button onClick={(e) => addAnswer(e, indexQuestion)}>

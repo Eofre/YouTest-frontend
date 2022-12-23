@@ -11,12 +11,13 @@ interface testCardProps {
 function testCard({ test, switchingToTheTest }: testCardProps) {
   return (
     <div onClick={() => switchingToTheTest(test.id)} className={cl.card}>
-      <img className={cl.img} src={test.img} alt="test" />
+      {/* <img className={cl.img} src={test.img} alt="test" /> */}
       <div className={cl.numberQuestions}>
         <img src={quiz} alt="" />
         {test.questions.length}
       </div>
       <h4 className={cl.title}>{test.title}</h4>
+      <p className={cl.description}>{test.description}</p>
     </div>
   );
 }
